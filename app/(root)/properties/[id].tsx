@@ -1,4 +1,4 @@
-import { View, Text, ScrollView, Dimensions, Image, TouchableOpacity } from 'react-native'
+import { View, Text, ScrollView, Dimensions, Image, TouchableOpacity, FlatList } from 'react-native'
 import React from 'react'
 import { router, useLocalSearchParams } from 'expo-router'
 import { useAppwrite } from '@/lib/useAppwrite';
@@ -203,7 +203,7 @@ const Property = () => {
             </View>
 
             <View>
-              <Comment />
+              <Comment item={property?.reviews[0]} />
             </View>
           </View>
         )}
